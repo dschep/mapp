@@ -2,6 +2,8 @@
 
 A quick start for leaflet based PWAs
 
+![screenshot.png](a screenshot of the app)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app)
 and uses [Material UI](https://material-ui.com/) for the widgets and uses
 [Leaflet](https://leafletjs.com) for the map.
