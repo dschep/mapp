@@ -1,0 +1,41 @@
+{
+  "name": "mapp",
+  "version": "0.4.0",
+  "private": true,
+  "devDependencies": {
+    "prettier": "latest"
+  },
+  "dependencies": {
+    "@material-ui/core": "^3.6.1",
+    "@material-ui/icons": "^3.0.1",
+    "@turf/helpers": "^6.1.4",
+    "leaflet": "^1.5.1",
+    "lodash": "^4.17.14",
+    "markdown-to-jsx": "^6.9.0",
+    "pwa-install-prompt": "^1.1.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-leaflet": "^2.4.0",
+    "react-scripts": "2.1.1",
+    "react-waterfall": "^4.0.0",
+    "uuid": "^3.3.2"
+  },
+  "scripts": {
+    "start": "REACT_APP_STAGE=local react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint": "eslint src public/sw.js",
+    "prettier": "prettier --write 'src/**' 'public/**.{js,html,css,json}'"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "homepage": "/"
+}

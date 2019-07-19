@@ -1,0 +1,23 @@
+#!/bin/bash
+
+set -e
+
+if [ "$STAGE" == prod ]; then
+    DOMAIN=mapp.io
+else
+    DOMAIN=dev.mapp.io
+fi
+
+if ! aws s3api head-bucket --bucket $DOMAIN 2> /dev/null; then
+    echo Creating S3 Bucket: $DOMAIN
+    aws s3api create-bucket --bucket $DOMAIN
+fi
+
+echo Setting website config for S3 Bucket: $DOMAIN
+aws s3 website s3://$DOMAIN/ --index-document index.html --error-document index.html
+
+echo Setting Bucket Policy on $DOMAIN
+aws s3api put-bucket-policy --bucket $DOMAIN --policy '{"Id": "Policy1397632521960", "Statement": [ { "Sid": "Stmt1397633323327", "Action": [ "s3:GetObject" ], "Effect": "Allow", "Resource": "arn:aws:s3:::'$DOMAIN'/*", "Principal": { "AWS": [ "*" ] } } ] }'
+
+echo Syncing build to S3 Bucket: $DOMAIN
+aws s3 sync --delete ./build/ s3://$DOMAIN/
