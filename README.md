@@ -2,7 +2,7 @@
 
 A quick start for leaflet based PWAs
 
-![screenshot.png](a screenshot of the app)
+![a screenshot of the app](screenshot.png)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app)
 and uses [Material UI](https://material-ui.com/) for the widgets and uses
