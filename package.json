@@ -6,18 +6,18 @@
     "prettier": "latest"
   },
   "dependencies": {
-    "@material-ui/core": "^3.6.1",
-    "@material-ui/icons": "^3.0.1",
+    "@material-ui/core": "^4.2.1",
+    "@material-ui/icons": "^4.2.1",
     "@turf/helpers": "^6.1.4",
     "leaflet": "^1.5.1",
-    "lodash": "^4.17.14",
-    "markdown-to-jsx": "^6.9.0",
+    "lodash": "^4.17.15",
+    "markdown-to-jsx": "^6.10.2",
     "pwa-install-prompt": "^1.1.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-leaflet": "^2.4.0",
-    "react-scripts": "2.1.1",
-    "react-waterfall": "^4.0.0",
+    "react-scripts": "3.0.1",
+    "react-waterfall": "^4.0.4",
     "uuid": "^3.3.2"
   },
   "scripts": {
