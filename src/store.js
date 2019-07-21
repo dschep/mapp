@@ -18,6 +18,8 @@ const config = {
     drawer: false,
     path: window.location.pathname,
     view: "Map",
+    following: JSON.parse(localStorage.getItem("following") || "true"),
+    center: JSON.parse(localStorage.getItem("center") || null) || {lat: 38.9043018, lng: -77.0237815},
     location: {
       ...(JSON.parse(localStorage.getItem("location") || null) || {
         coords: { latitude: 38.9043018, longitude: -77.0237815 }
@@ -47,10 +49,31 @@ const config = {
       localStorage.setItem("zoomLevel", zoomLevel.toString());
       return { zoomLevel };
     },
+    //center/folow
+    setFollowing: (state, actions, following) => {
+      localStorage.setItem("following", JSON.stringify(following));
+      if (following) {
+        actions.setCenter({
+          lat: state.location.coords.latitude,
+          lng: state.location.coords.longitude
+        })
+      }
+      return { following };
+    },
+    setCenter: (state, actions, center) => {
+      localStorage.setItem("center", JSON.stringify(center));
+      return { center };
+    },
     // Location stuff
     setLocation: (state, actions, newLocation) => {
       const location = cloneAsObject(newLocation);
       localStorage.setItem("location", JSON.stringify(location));
+      if (state.following) {
+        actions.setCenter({
+          lat: location.coords.latitude,
+          lng: location.coords.longitude
+        })
+      }
       return { location };
     },
     watchLocation: async (state, actions) => {

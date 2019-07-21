@@ -3,7 +3,7 @@ import { withStyles } from "@material-ui/core/styles";
 import PlusIcon from "@material-ui/icons/Add";
 import MinusIcon from "@material-ui/icons/Minimize";
 import Fab from "@material-ui/core/Fab";
-import { actions, connect } from "../store";
+import { actions, connect } from "../../store";
 
 const styles = theme => ({
   fab1: {
