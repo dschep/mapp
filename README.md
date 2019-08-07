@@ -1,6 +1,6 @@
 # MAPP
 
-A quick start for leaflet based PWAs
+A quick start for leaflet + react + material(using [material-ui.com](https://material-ui.com)) based PWAs
 
 ![a screenshot of the app](screenshot.png)
 
