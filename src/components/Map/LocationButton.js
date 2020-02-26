@@ -7,8 +7,8 @@ const styles = theme => ({
   fab: {
     zIndex: 1200,
     position: "fixed",
-    bottom: theme.spacing.unit * 2 + 48 * 2,
-    right: theme.spacing.unit * 2
+    bottom: theme.spacing(2) + 48 * 2,
+    right: theme.spacing(2)
   }
 });
 

@@ -5,7 +5,7 @@ import { connect/*, actions*/ } from "../store";
 
 const styles = theme => ({
   container: {
-    margin: theme.spacing.unit * 2
+    margin: theme.spacing(2)
   }
 });
 

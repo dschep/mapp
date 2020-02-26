@@ -9,14 +9,14 @@ const styles = theme => ({
   fab1: {
     zIndex: 1200,
     position: "fixed",
-    bottom: theme.spacing.unit * 2 + 48,
-    right: theme.spacing.unit * 2
+    bottom: theme.spacing(2) + 48,
+    right: theme.spacing(2)
   },
   fab2: {
     zIndex: 1200,
     position: "fixed",
-    bottom: theme.spacing.unit * 2,
-    right: theme.spacing.unit * 2
+    bottom: theme.spacing(2),
+    right: theme.spacing(2)
   },
   minus: {
     marginTop: "-17px" // because Minimize isn't centered.. such a hack
